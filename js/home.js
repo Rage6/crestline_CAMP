@@ -1,3 +1,3 @@
 $(()=>{
-  console.log("This worked");
+  console.log("The home page worked");
 });
