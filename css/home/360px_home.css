@@ -1,0 +1,31 @@
+body {
+  /* color: red; */
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.homeTitle {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.homeSubtitle {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  visibility: hidden;
+}
+
+.menuBox {
+  z-index: 2;
+}
+
+.menuBttn {
+  background-color: yellow;
+  z-index: 3;
+}
