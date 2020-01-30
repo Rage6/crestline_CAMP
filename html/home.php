@@ -22,25 +22,36 @@
     <script src="js/home.js"></script>
   </head>
   <body>
+    <div class="album">
+      <div class="allFrame tiltLeft frame1">
+        <img class="allPhotos photo1" src="img/home/photo_1.jpg" />
+      </div>
+      <div class="allFrame tiltRight frame2">
+        <img class="allPhotos photo2" src="img/home/photo_2.jpg" />
+      </div>
+      <div class="allFrame tiltLeft frame3">
+        <img class="allPhotos photo3" src="img/home/photo_3.jpg" />
+      </div>
+      <div class="allFrame tiltRight frame4">
+        <img class="allPhotos photo4" src="img/home/photo_4.jpg" />
+      </div>
+    </div>
     <div class="homeTitle">C.A.M.P.</div>
     <div class="homeSubtitle">Crestline Assistance & Ministries Program</div>
-    <div>Assisting Crestline and Crawford County</div>
-
-    <div id="menuBox" class="menuBox menu">
-      <div>THE NEED</div>
-      <div>THE PANTRY</div>
-      <div>SPECIAL PROGRAMS</div>
-      <div>HOW YOU CAN HELP</div>
-      <div>NEWS & ANNOUNCEMENTS</div>
-      <div>ABOUT US</div>
-      <div>CONTACT US</div>
-    </div>
     <div id="menuBttn" class="menuBttn menu">
       MENU
     </div>
-    
-    <div style="height:2000px"></div>
-    <div class="contentDiv">
+    <div id="menuBox" class="menuBox menu">
+      <div class="menuOption">> THE NEED</div>
+      <div class="menuOption">> THE PANTRY</div>
+      <div class="menuOption">> SPECIAL PROGRAMS</div>
+      <div class="menuOption">> HOW YOU CAN HELP</div>
+      <div class="menuOption">> NEWS & ANNOUNCEMENTS</div>
+      <div class="menuOption">> ABOUT US</div>
+      <div class="menuOption">> CONTACT US</div>
+    </div>
+    <div>Assisting Crestline and Crawford County</div>
+    <div class="contentDiv" style="height:2000px">
       Content
     </div>
   </body>

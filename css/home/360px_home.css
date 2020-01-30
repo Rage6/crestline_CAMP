@@ -3,6 +3,62 @@ body {
   margin: 0px;
   border: 0px;
   padding: 0px;
+  background-color: lightblue;
+}
+
+.album {
+  margin-top: 90px;
+}
+
+.allFrame {
+  margin: 0 10% 30px 10%;
+  padding: 20px 5% 70px 5%;
+  background-color: white;
+  width: 70%;
+}
+
+.tiltLeft {
+  transform: rotate(-10deg);
+}
+
+.tiltRight {
+  transform: rotate(10deg);
+}
+
+.frame1 {
+  display: block;
+}
+
+.frame2 {
+  display: none;
+}
+
+.frame3 {
+  display: none;
+}
+
+.frame4 {
+  display: none;
+}
+
+.allPhotos {
+  width: 100%;
+}
+
+.photo1 {
+
+}
+
+.photo2 {
+
+}
+
+.photo3 {
+
+}
+
+.photo4 {
+
 }
 
 .homeTitle {
@@ -19,13 +75,27 @@ body {
   position: fixed;
   width: 100%;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .menuBox {
   z-index: 2;
 }
 
+.menuOption {
+  border-bottom: 1px solid black;
+  padding: 10px 0 10px 5%;
+  color: black;
+  background-color: lightgrey;
+}
+
 .menuBttn {
-  background-color: yellow;
+  border-top: 1px solid black;
+  padding: 15px 0;
+  top: 0;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: green;
   z-index: 3;
 }
