@@ -24,16 +24,10 @@
   <body>
     <div class="album">
       <div class="allFrame tiltLeft frame1">
-        <img class="allPhotos photo1" src="img/home/photo_1.jpg" />
+        <div class="allPhotos photo1"></div>
       </div>
       <div class="allFrame tiltRight frame2">
-        <img class="allPhotos photo2" src="img/home/photo_2.jpg" />
-      </div>
-      <div class="allFrame tiltLeft frame3">
-        <img class="allPhotos photo3" src="img/home/photo_3.jpg" />
-      </div>
-      <div class="allFrame tiltRight frame4">
-        <img class="allPhotos photo4" src="img/home/photo_4.jpg" />
+        <div class="allPhotos photo2"></div>
       </div>
     </div>
     <div class="homeTitle">C.A.M.P.</div>

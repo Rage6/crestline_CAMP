@@ -8,10 +8,12 @@ body {
 
 .album {
   margin-top: 90px;
+  height: 400px;
 }
 
 .allFrame {
   margin: 0 10% 30px 10%;
+  border: 1px solid lightgrey;
   padding: 20px 5% 70px 5%;
   background-color: white;
   width: 70%;
@@ -26,39 +28,69 @@ body {
 }
 
 .frame1 {
-  display: block;
+  position: absolute;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1,end);
+  animation-name: switchFrame1;
+}
+
+@keyframes switchFrame1 {
+  0% {
+    z-index: 2;
+  }
+  50% {
+    z-index: 0;
+  }
 }
 
 .frame2 {
-  display: none;
-}
-
-.frame3 {
-  display: none;
-}
-
-.frame4 {
-  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .allPhotos {
   width: 100%;
+  padding-top: 100%;
 }
 
 .photo1 {
+  background: url("../../img/home/photo_1.jpg");
+  background-size: cover;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1,end);
+  animation-name: switchPhoto1;
+}
 
+@keyframes switchPhoto1 {
+  0% {
+    background-image: url("../../img/home/photo_1.jpg");
+  }
+  50% {
+    background-image: url("../../img/home/photo_3.jpg");
+  }
 }
 
 .photo2 {
-
+  background-image: url("../../img/home/photo_4.jpg");
+  background-size: cover;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1,end);
+  animation-name: switchPhoto2;
 }
 
-.photo3 {
-
-}
-
-.photo4 {
-
+@keyframes switchPhoto2 {
+  0% {
+    background-image: url("../../img/home/photo_4.jpg");
+  }
+  25% {
+    background-image: url("../../img/home/photo_2.jpg");
+  }
+  75% {
+    background-image: url("../../img/home/photo_4.jpg");
+  }
 }
 
 .homeTitle {
@@ -79,7 +111,7 @@ body {
 }
 
 .menuBox {
-  z-index: 2;
+  z-index: 3;
 }
 
 .menuOption {
@@ -97,5 +129,5 @@ body {
   font-size: 1.3rem;
   text-align: center;
   background-color: green;
-  z-index: 3;
+  z-index: 4;
 }
