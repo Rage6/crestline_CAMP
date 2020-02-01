@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1367px) and (max-width: 1440px)" href="css/home/1440px_home.css"/>
     <!-- Width: 1441px and above -->
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1441px)" href="css/home/1920px_home.css"/>
+    <!-- All of the fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Acme|Belleza|Darker+Grotesque|Francois+One|Julius+Sans+One|Lexend+Exa|Pontano+Sans&display=swap" rel="stylesheet">
+    <!-- For JS and jQuery -->
     <?php echo($jquery); ?>
     <script src="js/home.js"></script>
   </head>
@@ -30,8 +33,10 @@
         <div class="allPhotos photo2"></div>
       </div>
     </div>
-    <div class="homeTitle">C.A.M.P.</div>
-    <div class="homeSubtitle">Crestline Assistance & Ministries Program</div>
+    <div class="titleBox">
+      <div class="homeTitle">C.A.M.P.</div>
+      <div class="homeSubtitle">Crestline Assistance & Ministries Program</div>
+    </div>
     <div id="menuBttn" class="menuBttn menu">
       MENU
     </div>
@@ -44,7 +49,7 @@
       <div class="menuOption">> ABOUT US</div>
       <div class="menuOption">> CONTACT US</div>
     </div>
-    <div>Assisting Crestline and Crawford County</div>
+    <!-- <div>Assisting Crestline and Crawford County</div> -->
     <div class="contentDiv" style="height:2000px">
       Content
     </div>

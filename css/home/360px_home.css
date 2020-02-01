@@ -1,13 +1,18 @@
+/* Prussian Blue: #0B3C5D */
+/* Sky Blue: #328CC1 */
+/* Gold Leaf: #D9B310 */
+/* Ivory Black: #1D2731 */
+
 body {
   /* color: red; */
   margin: 0px;
   border: 0px;
   padding: 0px;
-  background-color: lightblue;
+  background-color: #FFCE00;
 }
 
 .album {
-  margin-top: 90px;
+  padding-top: 90px;
   height: 400px;
 }
 
@@ -93,13 +98,21 @@ body {
   }
 }
 
+.titleBox {
+  color: yellow;
+  background-color: #0B3C5D;
+}
+
 .homeTitle {
   font-size: 4rem;
+  font-family: "Belleza", sans-serif;
   text-align: center;
 }
 
 .homeSubtitle {
+  padding: 0 10% 15px 10%;
   font-size: 1.5rem;
+  font-family: "Belleza", sans-serif;
   text-align: center;
 }
 
@@ -112,22 +125,24 @@ body {
 
 .menuBox {
   z-index: 3;
+  font-family: "Pontano Sans", sans-serif;
 }
 
 .menuOption {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid yellow;
   padding: 10px 0 10px 5%;
-  color: black;
-  background-color: lightgrey;
+  color: yellow;
+  background-color: #0B3C5D;
 }
 
 .menuBttn {
-  border-top: 1px solid black;
-  padding: 15px 0;
+  border-bottom: 3px solid #0B3C5D;
+  padding: 10px 0;
   top: 0;
-  color: white;
+  color: #0B3C5D;
+  font-family: "Julius Sans One", sans-serif;
   font-size: 1.3rem;
   text-align: center;
-  background-color: green;
+  background-color: #FFCE00;
   z-index: 4;
 }
