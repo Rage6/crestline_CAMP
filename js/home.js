@@ -1,12 +1,12 @@
-$(()=>{
+$(document).ready(()=>{
   // console.log("The home page worked");
 
   // Presets the menu button and box
-  let windowHeight = $(window).outerHeight();
-  let windowWidth = $(window).outerWidth();
-  let menuBttnHeight = $("#menuBttn").outerHeight();
-  let initBoxHeight = $("#menuBox").outerHeight();
-  let initBoxTop = (initBoxHeight - menuBttnHeight) * (-1);
+  let windowHeight = $(window).outerHeight(true);
+  let windowWidth = $(window).outerWidth(true);
+  let menuBttnHeight = $("#menuBttn").outerHeight(true);
+  let initBoxHeight = $("#menuBox").outerHeight(true);
+  let initBoxTop = initBoxHeight * (-1);
   $(".menuBox").css('top',initBoxTop);
   $(".menu").css('visibility','visible');
 
@@ -16,14 +16,11 @@ $(()=>{
     let newBttnHeight = $("#menuBttn").outerHeight();
     let newBoxTop = $("#menuBox").position().top;
     let newBoxHeight = $("#menuBox").outerHeight();
-    let newBoxPx = null;
     if (newBoxTop == newBttnHeight) {
       newBoxTop = (newBoxHeight - newBttnHeight) * (-1);
-      newBoxPx = newBttnTop + "px";
       $("#menuBox").animate({"top":newBoxTop},400);
     } else {
       newBoxTop = newBttnHeight;
-      newBoxPx = newBttnTop + "px";
       $("#menuBox").animate({"top":newBoxTop},400);
     };
   })
@@ -34,8 +31,47 @@ $(()=>{
     let newBttnTop = $("#menuBttn").position().top;
     let newBoxHeight = $("#menuBox").outerHeight();
     newBoxTop = (newBoxHeight - newBttnHeight) * (-1);
-    newBoxPx = newBttnTop + "px";
     $("#menuBox").animate({"top":newBoxTop},400);
   })
+
+  // Function to slide the window to the appropriate topic
+  const clickForBox = (boxId) => {
+    let currentMenuHeight = $("#menuBttn").outerHeight();
+    $(boxId).css('height',currentMenuHeight);
+    let boxTop = $(boxId).position().top;
+    $('html,body').animate({
+      scrollTop: $(boxId).offset().top
+    },400);
+  };
+
+  $("#offer").click(()=>{
+    clickForBox("#offerBox");
+  })
+
+  $("#whenAndWhere").click(()=>{
+    clickForBox("#whenAndWhereBox");
+  })
+
+  $("#specialPrograms").click(()=>{
+    clickForBox("#specialProgramsBox");
+  })
+
+  $("#helping").click(()=>{
+    clickForBox("#helpingBox");
+  })
+
+  $("#bulletin").click(()=>{
+    clickForBox("#bulletinBox");
+  })
+
+  $("#about").click(()=>{
+    clickForBox("#aboutBox");
+  })
+
+  $("#contact").click(()=>{
+    clickForBox("#contactBox");
+  })
+
+  
 
 });
