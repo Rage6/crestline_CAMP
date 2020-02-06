@@ -10,6 +10,23 @@ $(document).ready(()=>{
   $(".menuBox").css('top',initBoxTop);
   $(".menu").css('visibility','visible');
 
+  // To set up the Google Map
+  const initMap() {
+    const campLocation = {lat: 40.779604, lng: -82.730721};
+    let mapImg = new google.maps.Map(
+      $("#mapBox"), {
+        zoom: 4,
+        center: campLocation
+      }
+    );
+    let marker = new google.maps.Marker(
+      {
+        position: campLocation,
+        map: mapImg
+      }
+    );
+  };
+
   // Makes the options slide up or down
   $("#menuBttn").click(()=>{
     let newBttnTop = $("#menuBttn").position().top;
@@ -31,7 +48,7 @@ $(document).ready(()=>{
     let newBttnTop = $("#menuBttn").position().top;
     let newBoxHeight = $("#menuBox").outerHeight();
     newBoxTop = (newBoxHeight - newBttnHeight) * (-1);
-    $("#menuBox").animate({"top":newBoxTop},400);
+    $("#menuBox").animate({"top":newBoxTop},200);
   })
 
   // Function to slide the window to the appropriate topic
@@ -41,7 +58,7 @@ $(document).ready(()=>{
     let boxTop = $(boxId).position().top;
     $('html,body').animate({
       scrollTop: $(boxId).offset().top
-    },400);
+    },800);
   };
 
   $("#offer").click(()=>{
@@ -72,6 +89,6 @@ $(document).ready(()=>{
     clickForBox("#contactBox");
   })
 
-  
+
 
 });

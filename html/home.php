@@ -22,7 +22,10 @@
     <link href="https://fonts.googleapis.com/css?family=Acme|Belleza|Darker+Grotesque|Francois+One|Julius+Sans+One|Lexend+Exa|Pontano+Sans|Rubik&display=swap" rel="stylesheet">
     <!-- For JS and jQuery -->
     <?php echo($jquery); ?>
+    <!-- The main, custom JS -->
     <script src="js/home.js"></script>
+    <!-- The source of the Google Map -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key= &callback=initMap"></script>
   </head>
   <body>
     <!-- <div>
@@ -77,8 +80,9 @@
         <div class="infoTitle">
           WHERE & WHEN
         </div>
-        <div style="height:1000px" class="infoContent">
+        <div class="infoContent">
           This is "WHERE & WHEN"
+          <div id="mapBox"></div>
         </div>
       </div>
       <div id="specialProgramsBox" class="infoSpace"></div>
