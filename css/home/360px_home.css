@@ -1,0 +1,230 @@
+/* Prussian Blue: #0B3C5D */
+/* Sky Blue: #328CC1 */
+/* Gold Leaf: #D9B310 */
+/* Ivory Black: #1D2731 */
+
+/* From Van Gogh painting: https://upload.wikimedia.org/wikipedia/commons/c/c6/Van_Gogh_Twelve_Sunflowers.jpg */
+/* Yellow flower: #F2CA46 */
+/* Light blue wall: #BAD5B7 */
+/* Green-blue wall: #8EAB7B */
+
+body {
+  /* color: red; */
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background-color: #F2CA46;
+}
+
+.album {
+  padding-top: 90px;
+  height: 400px;
+  background-image: url("../../img/home/vangogh_flower1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.allFrame {
+  margin: 0 15% 30px 15%;
+  border: 1px solid lightgrey;
+  padding: 20px 5% 70px 5%;
+  background-color: white;
+  width: 60%;
+}
+
+.tiltLeft {
+  transform: rotate(-10deg);
+}
+
+.tiltRight {
+  transform: rotate(10deg);
+}
+
+.frame1 {
+  position: absolute;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1,end);
+  animation-name: switchFrame1;
+}
+
+@keyframes switchFrame1 {
+  0% {
+    z-index: 2;
+  }
+  50% {
+    z-index: 0;
+  }
+}
+
+.frame2 {
+  position: absolute;
+  z-index: 1;
+}
+
+.allPhotos {
+  width: 100%;
+  padding-top: 100%;
+}
+
+.photo1 {
+  background: url("../../img/home/photo_1.jpg");
+  background-size: cover;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1,end);
+  animation-name: switchPhoto1;
+}
+
+@keyframes switchPhoto1 {
+  0% {
+    background-image: url("../../img/home/photo_1.jpg");
+  }
+  50% {
+    background-image: url("../../img/home/photo_3.jpg");
+  }
+}
+
+.photo2 {
+  background-image: url("../../img/home/photo_4.jpg");
+  background-size: cover;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1,end);
+  animation-name: switchPhoto2;
+}
+
+@keyframes switchPhoto2 {
+  0% {
+    background-image: url("../../img/home/photo_4.jpg");
+  }
+  25% {
+    background-image: url("../../img/home/photo_2.jpg");
+  }
+  75% {
+    background-image: url("../../img/home/photo_4.jpg");
+  }
+}
+
+.titleBox {
+  color: white;
+  background-color: #328CC1;
+}
+
+.homeTitle {
+  font-size: 4rem;
+  font-family: "Belleza", sans-serif;
+  text-align: center;
+}
+
+.homeSubtitle {
+  margin: 0 10%;
+  border-top: 1px solid white;
+  padding: 10px 10% 15px 10%;
+  font-size: 1.5rem;
+  font-family: "Francois One", sans-serif;
+  text-align: center;
+}
+
+.menu {
+  border-bottom: 1px solid white;
+  position: fixed;
+  width: 100%;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.menuBox {
+  z-index: 3;
+  font-family: "Pontano Sans", sans-serif;
+}
+
+.menuOption {
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px 5%;
+  color: white;
+  background-color: #328CC1;
+}
+
+.menuBttn {
+  padding: 10px 0;
+  top: 0;
+  color: white;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #8EAB7B;
+  z-index: 4;
+  cursor: pointer;
+}
+
+/*
+.introduction {
+  margin: 50px 5%;
+  border-radius: 15px;
+  padding: 5%;
+  color: white;
+  font-family: "Julius Sans One", sans-serif;
+  background-color: #8EAB7B;
+}
+
+.introduction div:first-of-type {
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.introduction div:last-child {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+*/
+
+.infoSpace {
+  margin-top: 50px;
+}
+
+.infoBox {
+
+}
+
+.infoTitle {
+  padding: 10px 0;
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
+  font-family: "Pontano Sans", sans-serif;
+  background-color: #8EAB7B;
+}
+
+.infoContent {
+  padding: 30px 5%;
+  font-size: 1rem;
+  font-family: "Lexend Exa", sans-serif;
+}
+
+.programList {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: white;
+  background-color: #328CC1;
+}
+
+.programList div {
+  padding-bottom: 40px;
+}
+
+.programList div div {
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 20px 10%;
+  color: white;
+  text-align: center;
+  background-color: #328CC1;
+}

@@ -11,8 +11,13 @@
 
   //
   if ($currentPath == "localhost") {
-    require_once("php/home.php");
-    require_once("html/home.php");
+    if (isset($_GET['admin'])) {
+      require_once("php/admin.php");
+      require_once("html/admin.php");
+    } else {
+      require_once("php/home.php");
+      require_once("html/home.php");
+    };
   };
 
 ?>
