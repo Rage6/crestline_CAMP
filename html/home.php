@@ -25,7 +25,7 @@
     <!-- The main, custom JS -->
     <script src="js/home.js"></script>
     <!-- The source of the Google Map -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key= &callback=initMap"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key= &callback=initMap"></script> -->
   </head>
   <body>
     <!-- <div>

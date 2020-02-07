@@ -10,22 +10,22 @@ $(document).ready(()=>{
   $(".menuBox").css('top',initBoxTop);
   $(".menu").css('visibility','visible');
 
-  // To set up the Google Map
-  const initMap() {
-    const campLocation = {lat: 40.779604, lng: -82.730721};
-    let mapImg = new google.maps.Map(
-      $("#mapBox"), {
-        zoom: 4,
-        center: campLocation
-      }
-    );
-    let marker = new google.maps.Marker(
-      {
-        position: campLocation,
-        map: mapImg
-      }
-    );
-  };
+  // // To set up the Google Map
+  // const initMap() {
+  //   const campLocation = {lat: 40.779604, lng: -82.730721};
+  //   let mapImg = new google.maps.Map(
+  //     $("#mapBox"), {
+  //       zoom: 4,
+  //       center: campLocation
+  //     }
+  //   );
+  //   let marker = new google.maps.Marker(
+  //     {
+  //       position: campLocation,
+  //       map: mapImg
+  //     }
+  //   );
+  // };
 
   // Makes the options slide up or down
   $("#menuBttn").click(()=>{
