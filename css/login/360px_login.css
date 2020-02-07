@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: #F2CA46;
+}
+
+.title {
+  margin: 0 10%;
+  padding-top: 20px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  color: #328CC1;
+}
+
+.title div:first-of-type {
+  padding-right: 10px;
+  font-size: 2rem;
+}
+
+.loginBox {
+  margin-top: 100px;
+  background-color: #328CC1;
+}
+
+.loginBox form div input {
+  margin-top: 30px;
+}
+
+.loginBox form div input {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 80%;
+}
+
+.loginEnter {
+  margin-left: 20% !important;
+  margin-bottom: 30px;
+  padding: 5px 0;
+  color: white;
+  background-color: #8EAB7B;
+  width: 60% !important;
+}
