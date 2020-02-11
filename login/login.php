@@ -44,6 +44,13 @@
           </div>
         </form>
       </div>
+      <?php
+        if (isset($_SESSION['message'])) {
+          // echo("Testing");
+          echo($_SESSION['message']);
+          // unset($_SESSION['message']);
+        };
+      ?>
     </div>
   </body>
 </html>
