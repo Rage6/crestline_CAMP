@@ -8,19 +8,18 @@
     ));
     $userInfo = $findUserStmt->fetch(PDO::FETCH_ASSOC);
     // The discovered row's encrypted password is compared to the current user's encrypted password
-    $enteredPw = htmlentities($_POST['password']);
     if (password_verify($_POST['password'],$userInfo['password']) == true) {
       $_SESSION['userId'] = $userInfo['user_id'];
       $_SESSION['token'] = $userInfo['token'];
-      $_SESSION['message'] = "<div>Welcome, ".$userInfo['first_name']."</div>";
-      header('Location: ?admin');
-      return true;
+      $_SESSION['message'] = "<div class='mssgBox' style='color: #328CC1'>Welcome, ".$userInfo['first_name']."</div>";
+      header('Location: ../admin/admin.php');
+      exit;
+      // return true;
     } else {
-      $_SESSION['message'] = "<div>Incorrect password</div>";
-      unset($_SESSION['userId']);
-      unset($_SESSION['token']);
-      header('Location: ?login');
-      return false;
+      $_SESSION['message'] = "<div class='mssgBox' style='color: red'>Incorrect password</div>";
+      header('Location: login.php');
+      exit;
+      // return true;
     };
   }
 

@@ -14,17 +14,17 @@
     <!-- Width: 0px to 360px (Default CSS) -->
     <link rel="stylesheet" type="text/css" href="index/css/360px_index.css" />
     <!-- Width: 361px to 375px -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 375px)" href="css/home/375px_index.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 375px)" href="css/index/375px_index.css" />
     <!-- Width: 376px to 414px -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 376px) and (max-width: 414px)" href="css/home/414px_index.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 376px) and (max-width: 414px)" href="css/index/414px_index.css"/>
     <!-- Width: 415px to 768px -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 415px) and (max-width: 768px)" href="css/home/768px_index.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 415px) and (max-width: 768px)" href="css/index/768px_index.css"/>
     <!-- Width: 769px to 1366px -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 769px) and (max-width: 1366px)" href="css/home/1366px_index.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 769px) and (max-width: 1366px)" href="css/index/1366px_index.css"/>
     <!-- Width: 1367px to 1440px -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1367px) and (max-width: 1440px)" href="css/home/1440px_index.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1367px) and (max-width: 1440px)" href="css/index/1440px_index.css"/>
     <!-- Width: 1441px and above -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1441px)" href="css/home/1920px_index.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1441px)" href="css/index/1920px_index.css"/>
     <!-- All of the fonts -->
     <link href="https://fonts.googleapis.com/css?family=Acme|Belleza|Darker+Grotesque|Francois+One|Julius+Sans+One|Lexend+Exa|Pontano+Sans|Rubik&display=swap" rel="stylesheet">
     <!-- For JS and jQuery -->

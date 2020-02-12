@@ -1,3 +1,12 @@
+<?php
+
+  require_once("../required.php");
+  require_once("lead_admin.php");
+
+  // var_dump($_SESSION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,5 +24,8 @@
       };
     ?>
     <div>You are in the Admin page</div>
+    <form method="POST" name="logOut" />
+      <input type="SUBMIT" name="exitClick" value="LOGOUT" />
+    </form>
   </body>
 </html>
