@@ -10,16 +10,16 @@ if (isset($_SESSION['userId'])) {
   session_destroy();
   header('Location: ../login/login.php');
   exit;
-  // return true;
+  return true;
 };
 
 if (isset($_POST['exitClick'])) {
   unset($_SESSION['userId']);
   unset($_SESSION['token']);
-  $_SESSION['message'] = "<div class='mssgBox' style='color: #328CC1'>Logout successful</div>";
+  $_SESSION['message'] = "<div class='loginMssg' style='color: #328CC1'>Logout successful</div>";
   header('Location: ../login/login.php');
   exit;
-  // return true;
+  return true;
 };
 
 ?>

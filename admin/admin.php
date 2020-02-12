@@ -3,7 +3,7 @@
   require_once("../required.php");
   require_once("lead_admin.php");
 
-  // var_dump($_SESSION);
+  var_dump($_SESSION);
 
 ?>
 
