@@ -51,7 +51,10 @@
           <input type='text' name='title' placeholder='Enter a title' />
         </div>
         <div>
-          <textarea name='title' placeholder='Enter your '></textarea/>
+          <textarea name='newTitle' placeholder='Enter your '></textarea/>
+        </div>
+        <div>
+          <input type='submit' name='newBulletin' value='ENTER' />
         </div>
       </form>
     </div>
@@ -67,12 +70,21 @@
           for ($bulletinNum = 0; $bulletinNum < count($bulletinList); $bulletinNum++) {
             echo("
             <div class='bulletinPost'>
-              <div class='bulletinTitle'>
-                ".$bulletinList[$bulletinNum]['title']."
-              </div>
-              <div class='bulletinContent'>
-                ".$bulletinList[$bulletinNum]['content']."
-              </div>
+              <form method='POST'>
+                <input type='hidden' value='".$bulletinList[$bulletinNum]['bulletin_id']."'/>
+                <div class='bulletinTitle'>
+                  <input type='text' name='updateTitle' value='".$bulletinList[$bulletinNum]['title']."' placeholder='Enter a title'
+                </div>
+                <div class='bulletinContent'>
+                  <textarea name='updateContent' placeholder='Enter your information'>
+                    ".$bulletinList[$bulletinNum]['content']."
+                  </textarea>
+                </div>
+                <div>
+                  <input type='submit' name='changeBulletin' value='CHANGE' />
+                  <input type='submit' name='deleteBulletin' value='DELETE' />
+                </div>
+              </form>
             </div>");
           };
         } else {
