@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: #F2CA46;
+}
+
+.topBanner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logOutBttn {
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+}
+
+.adminMssg {
+  margin: 20px 10%;
+  font-size: 1.5rem;
+  text-align: center;
+}

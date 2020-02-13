@@ -44,3 +44,9 @@ body {
   background-color: #8EAB7B;
   width: 60% !important;
 }
+
+.loginMssg {
+  margin: 20px 10%;
+  font-size: 1.5rem;
+  text-align: center;
+}

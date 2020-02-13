@@ -31,6 +31,11 @@
       $updateAttemptStmt->execute(array(
         ':ui'=>$userInfo['user_id']
       ));
+      $updateLogHistory = $pdo->prepare('INSERT INTO history (ip_address,user_id) VALUES (:ip,:ud)');
+      $updateLogHistory->execute(array(
+        ':ip'=>$_SERVER['REMOTE_ADDR'],
+        ':ud'=>$userInfo['user_id']
+      ));
       header('Location: ../admin/admin.php');
       exit;
       return true;
