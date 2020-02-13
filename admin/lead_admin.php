@@ -1,6 +1,6 @@
 <?php
 
-// The user id will be used to compare the dB's token to the user's token
+// The user id is used to compare the dB's token to the user's token
 if (isset($_SESSION['userId'])) {
   $compareTokenStmt = $pdo->prepare("SELECT token FROM users WHERE user_id=:ui");
   $compareTokenStmt->execute(array(
@@ -22,6 +22,32 @@ if (isset($_SESSION['userId'])) {
   return false;
 };
 
+// A new bulletin is added with this code
+if (isset($_POST['newBulletin'])) {
+  if ($_POST['newTitle'] == '') {
+    $_SESSION['message'] = "<div class='loginMssg' style='color: red'>Title required</div>";
+    header('Location: admin.php');
+    exit;
+    return false;
+  } else if ($_POST['newContent'] == '') {
+    $_SESSION['message'] = "<div class='loginMssg' style='color: red'>New information required</div>";
+    header('Location: admin.php');
+    exit;
+    return false;
+  } else {
+    $addBulletinStmt = $pdo->prepare("INSERT INTO bulletins (title,content) VALUES (:nt,:nc)");
+    $addBulletinStmt->execute(array(
+      ':nt'=>htmlentities($_POST['newTitle']),
+      ':nc'=>htmlentities($_POST['newContent'])
+    ));
+    $_SESSION['message'] = "<div class='loginMssg' style='color: #328CC1'>Bulletin added</div>";
+    header('Location: admin.php');
+    exit;
+    return true;
+  };
+}
+
+// How it logs out a user
 if (isset($_POST['exitClick'])) {
   unset($_SESSION['userId']);
   unset($_SESSION['token']);

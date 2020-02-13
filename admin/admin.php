@@ -30,7 +30,7 @@
     <!-- All of the fonts -->
     <link href="https://fonts.googleapis.com/css?family=Acme|Belleza|Darker+Grotesque|Francois+One|Julius+Sans+One|Lexend+Exa|Pontano+Sans|Rubik&display=swap" rel="stylesheet">
     <?php echo($jquery); ?>
-    <script src="js/home.js"></script>
+    <script src="admin.js"></script>
   </head>
   <body>
     <div class="topBanner">
@@ -38,29 +38,28 @@
         <input class="logOutBttn" type="SUBMIT" name="exitClick" value="LOGOUT" />
       </form>
     </div>
-    <div>STAFF CENTER</div>
+    <div class="mainTitle">
+      STAFF CENTER
+    </div>
     <?php
       if (isset($_SESSION['message'])) {
         echo($_SESSION['message']);
         unset($_SESSION['message']);
       };
     ?>
-    <div>
+    <div class="newBox">
+      <div id="newBttn" class="newBttn">NEW +</div>
+      <div id="newMain" class="newMain">
       <form method="POST">
-        <div>
-          <input type='text' name='title' placeholder='Enter a title' />
-        </div>
-        <div>
-          <textarea name='newTitle' placeholder='Enter your '></textarea/>
-        </div>
-        <div>
-          <input type='submit' name='newBulletin' value='ENTER' />
-        </div>
+        <input class="newEntry" type='text' name='newTitle' placeholder='Enter a title' />
+        <textarea class="newEntry" name='newContent' placeholder='Enter your new information'></textarea/>
+        <input class='newClick' type='submit' name='newBulletin' value='ENTER' />
       </form>
+      </div>
     </div>
     <div class="bulletinList">
       <?php
-        $bulletinListStmt = $pdo->prepare("SELECT * FROM bulletins ORDER BY post_time ASC");
+        $bulletinListStmt = $pdo->prepare("SELECT * FROM bulletins ORDER BY post_time DESC");
         $bulletinListStmt->execute();
         $bulletinList = array();
         while ($oneBulletin = $bulletinListStmt->fetch(PDO::FETCH_ASSOC)) {
