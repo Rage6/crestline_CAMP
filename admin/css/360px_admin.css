@@ -76,3 +76,20 @@ textarea.newEntry {
   background-color: #328CC1;
   width: 50%;
 }
+
+.bulletinList {
+  margin: 0 5%;
+}
+
+.bulletinPost {
+  margin-bottom: 30px;
+  padding-left: 2%;
+  background-color: lightgrey;
+}
+
+.bulletinInput {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  width: 98%;
+}

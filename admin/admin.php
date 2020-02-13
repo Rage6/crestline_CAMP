@@ -50,11 +50,11 @@
     <div class="newBox">
       <div id="newBttn" class="newBttn">NEW +</div>
       <div id="newMain" class="newMain">
-      <form method="POST">
-        <input class="newEntry" type='text' name='newTitle' placeholder='Enter a title' />
-        <textarea class="newEntry" name='newContent' placeholder='Enter your new information'></textarea/>
-        <input class='newClick' type='submit' name='newBulletin' value='ENTER' />
-      </form>
+        <form method="POST">
+          <input class="newEntry" type='text' name='newTitle' placeholder='Enter a title' />
+          <textarea class="newEntry" name='newContent' placeholder='Enter your new information'></textarea/>
+          <input class='newClick' type='submit' name='newBulletin' value='ENTER' />
+        </form>
       </div>
     </div>
     <div class="bulletinList">
@@ -72,10 +72,10 @@
               <form method='POST'>
                 <input type='hidden' value='".$bulletinList[$bulletinNum]['bulletin_id']."'/>
                 <div class='bulletinTitle'>
-                  <input type='text' name='updateTitle' value='".$bulletinList[$bulletinNum]['title']."' placeholder='Enter a title'
+                  <input class='bulletinInput' type='text' name='updateTitle' value='".$bulletinList[$bulletinNum]['title']."' placeholder='Enter a title' />
                 </div>
                 <div class='bulletinContent'>
-                  <textarea name='updateContent' placeholder='Enter your information'>
+                  <textarea class='bulletinInput' name='updateContent' placeholder='Enter your information'>
                     ".$bulletinList[$bulletinNum]['content']."
                   </textarea>
                 </div>
@@ -87,7 +87,7 @@
             </div>");
           };
         } else {
-            echo("There are no bulletins at this time.");
+            echo("<div>There are no bulletins at this time.</div>");
         }
       ?>
     </div>
