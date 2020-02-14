@@ -83,29 +83,36 @@ textarea.newEntry {
 
 .bulletinPost {
   margin-bottom: 30px;
-  padding-left: 2%;
+  border: 1px solid darkgrey;
   background-color: lightgrey;
 }
 
-.bulletinTitle {
-
+.bulletinTitle input {
+  font-size: 1.3rem;
 }
 
-.bulletinContent {
-
+.bulletinContent textarea {
+  font-size: 1.2rem;
+  overflow-y: scroll;
+  /* min-height: 100px; */
+  height: 280px;
 }
 
 .bulletinInput {
-  margin: 0px;
+  margin: 15px 1% 0 1%;
   border: 0px;
   padding: 0px;
   width: 98%;
 }
 
 .bttnRow {
+  padding: 10px 5%;
   display: flex;
   justify-content: space-between;
-  width: 98%;
+}
+
+.bttnRow:last-of-type {
+  margin-top: 15px;
 }
 
 .postBttn {
@@ -114,5 +121,7 @@ textarea.newEntry {
 }
 
 .confirmDelete {
+  padding: 40px 10% 20px 10%;
+  font-size: 1.2rem;
   display: none;
 }

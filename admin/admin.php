@@ -75,17 +75,14 @@
                   <input class='bulletinInput' type='text' name='updateTitle' value='".$bulletinList[$bulletinNum]['title']."' placeholder='Enter a title' />
                 </div>
                 <div class='bulletinContent'>
-                  <textarea class='bulletinInput' name='updateContent' placeholder='Enter your information'>
-                    ".$bulletinList[$bulletinNum]['content']."
-                  </textarea>
+                  <textarea class='bulletinInput' name='updateContent'>".$bulletinList[$bulletinNum]['content']."</textarea>
                 </div>
                 <div class='bttnRow'>
                   <input class='postBttn' style='background-color:blue' type='submit' name='changeBulletin' value='CHANGE' />
-                  <input data-type='button' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."' class='postBttn' style='background-color:red' type='button' value='DELETE' />
+                  <input data-type='button' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."' class='postBttn' style='color:white;background-color:black' type='button' value='Delete?' />
                 </div>
                 <div class='confirmDelete' data-type='box' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."'>
-                  ARE YOU SURE?</br>
-                  This bulletin will be deleted permanently.
+                  <b><u>WARNING:</u></b> If this bulletin is deleted, it cannot be recovered. Do you still want to delete it?
                   <div class='bttnRow'>
                     <input class='postBttn' style='background-color:red' type='submit' name='deleteBulletin' value='DELETE' />
                     <input data-type='button' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."' class='postBttn' style='background-color:grey' type='button' value='CANCEL' />

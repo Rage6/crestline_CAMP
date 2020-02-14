@@ -47,7 +47,7 @@ if (isset($_POST['newBulletin'])) {
   };
 }
 
-// Change an existing bulletin
+// Update any changes in a selected, existing bulletin
 if (isset($_POST['changeBulletin'])) {
   var_dump($_POST);
   if ($_POST['updateTitle'] != "" && $_POST['updateContent'] != "") {
@@ -69,7 +69,7 @@ if (isset($_POST['changeBulletin'])) {
   };
 }
 
-// Delete a specific bulletin
+// Delete a selected bulletin
 if (isset($_POST['deleteBulletin'])) {
   $deleteBulletin = $pdo->prepare("DELETE FROM bulletins WHERE bulletin_id=:bi");
   $deleteBulletin->execute(array(
