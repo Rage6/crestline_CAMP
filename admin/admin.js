@@ -2,6 +2,7 @@ $(()=>{
 
   console.log("The admin worked again");
 
+  // Shows and hides the 'new bulletin' option
   $("#newBttn").click(()=>{
     if ($("#newMain").css('display') == "none") {
       $("#newMain").css('display','block')
@@ -12,9 +13,9 @@ $(()=>{
     };
   });
 
+  // Opens and closes the selected 'Delete' option
   $("[data-type='button']").click(()=>{
     let thisEvent = "[data-type='box'][data-number='" + event.target.dataset.number + "']";
-    console.log($(thisEvent).css('display'));
     if ($(thisEvent).css('display') == 'block') {
       $(thisEvent).css('display','none');
     } else {
