@@ -87,9 +87,32 @@ textarea.newEntry {
   background-color: lightgrey;
 }
 
+.bulletinTitle {
+
+}
+
+.bulletinContent {
+
+}
+
 .bulletinInput {
   margin: 0px;
   border: 0px;
   padding: 0px;
   width: 98%;
+}
+
+.bttnRow {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+}
+
+.postBttn {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.confirmDelete {
+  display: none;
 }

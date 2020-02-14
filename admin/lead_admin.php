@@ -40,11 +40,45 @@ if (isset($_POST['newBulletin'])) {
       ':nt'=>htmlentities($_POST['newTitle']),
       ':nc'=>htmlentities($_POST['newContent'])
     ));
-    $_SESSION['message'] = "<div class='loginMssg' style='color: #328CC1'>Bulletin added</div>";
+    $_SESSION['message'] = "<div class='adminMssg' style='color: #328CC1'>Bulletin added</div>";
     header('Location: admin.php');
     exit;
     return true;
   };
+}
+
+// Change an existing bulletin
+if (isset($_POST['changeBulletin'])) {
+  var_dump($_POST);
+  if ($_POST['updateTitle'] != "" && $_POST['updateContent'] != "") {
+    $updateBulletinStmt = $pdo->prepare('UPDATE bulletins SET title=:ut, content=:uc WHERE bulletin_id=:ui');
+    $updateBulletinStmt->execute(array(
+      ':ut'=>htmlentities($_POST['updateTitle']),
+      ':uc'=>htmlentities($_POST['updateContent']),
+      ':ui'=>htmlentities($_POST['updateId'])
+    ));
+    $_SESSION['message'] = "<div class='adminMssg' style='color: #328CC1'>Update successful</div>";
+    header('Location: admin.php');
+    exit;
+    return true;
+  } else {
+    $_SESSION['message'] = "<div class='adminMssg' style='color: red'>Title and details required</div>";
+    header('Location: admin.php');
+    exit;
+    return false;
+  };
+}
+
+// Delete a specific bulletin
+if (isset($_POST['deleteBulletin'])) {
+  $deleteBulletin = $pdo->prepare("DELETE FROM bulletins WHERE bulletin_id=:bi");
+  $deleteBulletin->execute(array(
+    ':bi'=>htmlentities($_POST['updateId'])
+  ));
+  $_SESSION['message'] = "<div class='adminMssg' style='color: #328CC1'>Delete successful</div>";
+  header('Location: admin.php');
+  exit;
+  return true;
 }
 
 // How it logs out a user

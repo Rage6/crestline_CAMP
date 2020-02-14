@@ -70,7 +70,7 @@
             echo("
             <div class='bulletinPost'>
               <form method='POST'>
-                <input type='hidden' value='".$bulletinList[$bulletinNum]['bulletin_id']."'/>
+                <input type='hidden' name='updateId' value='".$bulletinList[$bulletinNum]['bulletin_id']."'/>
                 <div class='bulletinTitle'>
                   <input class='bulletinInput' type='text' name='updateTitle' value='".$bulletinList[$bulletinNum]['title']."' placeholder='Enter a title' />
                 </div>
@@ -79,9 +79,17 @@
                     ".$bulletinList[$bulletinNum]['content']."
                   </textarea>
                 </div>
-                <div>
-                  <input type='submit' name='changeBulletin' value='CHANGE' />
-                  <input type='submit' name='deleteBulletin' value='DELETE' />
+                <div class='bttnRow'>
+                  <input class='postBttn' style='background-color:blue' type='submit' name='changeBulletin' value='CHANGE' />
+                  <input data-type='button' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."' class='postBttn' style='background-color:red' type='button' value='DELETE' />
+                </div>
+                <div class='confirmDelete' data-type='box' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."'>
+                  ARE YOU SURE?</br>
+                  This bulletin will be deleted permanently.
+                  <div class='bttnRow'>
+                    <input class='postBttn' style='background-color:red' type='submit' name='deleteBulletin' value='DELETE' />
+                    <input data-type='button' data-number='".$bulletinList[$bulletinNum]['bulletin_id']."' class='postBttn' style='background-color:grey' type='button' value='CANCEL' />
+                  </div>
                 </div>
               </form>
             </div>");
